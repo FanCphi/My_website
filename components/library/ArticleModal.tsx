@@ -90,7 +90,7 @@ export default function ArticleModal({ article, onClose }: ArticleModalProps) {
               return (
                 <blockquote
                   key={i}
-                  className="border-l-2 border-green pl-4 italic text-dark/60 my-4"
+                  className="border-l-2 border-xiake pl-4 italic text-dark/60 my-4"
                 >
                   {line.replace("> ", "")}
                 </blockquote>

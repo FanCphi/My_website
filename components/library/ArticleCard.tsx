@@ -12,7 +12,7 @@ export default function ArticleCard({ article, onClick }: ArticleCardProps) {
   return (
     <button
       onClick={onClick}
-      className="w-full text-left p-5 rounded-lg border border-light-gray/50 bg-card hover:shadow-md hover:-translate-y-1 transition-all duration-300 group"
+      className="w-full text-left p-5 rounded-lg border border-light-gray/50 bg-card hover:shadow-md hover:-translate-y-1 transition-all duration-300 group pattern-ruyi"
     >
       <h3 className="font-heading text-base font-semibold text-dark mb-2 group-hover:text-green transition-colors duration-200">
         {article.title}

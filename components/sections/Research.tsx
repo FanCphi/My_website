@@ -38,7 +38,7 @@ const topics: ResearchTopic[] = [
 
 export default function Research() {
   return (
-    <section id="research" className="py-24 px-6 bg-light-gray/20">
+    <section id="research" className="py-24 px-6 bg-light-gray/20 pattern-cloud">
       <div className="max-w-6xl mx-auto">
         <FadeIn>
           <h2 className="font-heading text-3xl md:text-4xl font-bold text-dark mb-4">
@@ -52,7 +52,7 @@ export default function Research() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {topics.map((topic, i) => (
             <FadeIn key={topic.title} delay={i * 0.1}>
-              <div className="bg-card p-6 rounded-lg border border-light-gray/50 hover:shadow-md hover:-translate-y-1 transition-all duration-300">
+              <div className="bg-card p-6 rounded-lg border border-light-gray/50 hover:shadow-md hover:-translate-y-1 transition-all duration-300 pattern-ruyi">
                 <h3 className="font-heading text-lg font-semibold text-dark mb-3">
                   {topic.title}
                 </h3>

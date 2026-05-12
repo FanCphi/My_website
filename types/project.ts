@@ -17,7 +17,7 @@ export const statusLabels: Record<ProjectStatus, string> = {
 };
 
 export const statusColors: Record<ProjectStatus, string> = {
-  active: "bg-green/10 text-green",
-  completed: "bg-blue/10 text-blue",
-  paused: "bg-orange/10 text-orange",
+  active: "bg-xiake/10 text-xiake",
+  completed: "bg-yuzan/10 text-yuzan",
+  paused: "bg-zhuyue/10 text-zhuyue",
 };

@@ -12,7 +12,7 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="py-24 px-6 bg-light-gray/20">
+    <section id="contact" className="py-24 px-6 bg-light-gray/20 pattern-cloud">
       <div className="max-w-4xl mx-auto">
         <FadeIn>
           <h2 className="font-heading text-3xl md:text-4xl font-bold text-dark mb-4">

@@ -10,7 +10,7 @@ interface ProjectCardProps {
 
 export default function ProjectCard({ project }: ProjectCardProps) {
   return (
-    <div className="bg-card p-6 rounded-lg border border-light-gray/50 hover:shadow-md hover:-translate-y-1 transition-all duration-300 flex flex-col h-full">
+    <div className="bg-card p-6 rounded-lg border border-light-gray/50 hover:shadow-md hover:-translate-y-1 transition-all duration-300 flex flex-col h-full pattern-ruyi">
       <div className="flex items-start justify-between gap-3 mb-3">
         <h3 className="font-heading text-base font-semibold text-dark">
           {project.name}

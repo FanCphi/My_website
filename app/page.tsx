@@ -7,6 +7,7 @@ import Library from "@/components/sections/Library";
 import Projects from "@/components/sections/Projects";
 import CV from "@/components/sections/CV";
 import Contact from "@/components/sections/Contact";
+import PatternDivider from "@/components/ui/PatternDivider";
 import { getArticles, getProjects } from "@/lib/notion";
 import type { Article } from "@/types/article";
 import type { Project } from "@/types/project";
@@ -31,11 +32,17 @@ export default async function Home() {
       <Navbar />
       <main>
         <Hero />
+        <PatternDivider variant="quxi" />
         <About />
+        <PatternDivider variant="cloud" />
         <Research />
+        <PatternDivider variant="ruyi" />
         <Library articles={articles} />
+        <PatternDivider variant="quxi" />
         <Projects projects={projects} />
+        <PatternDivider variant="cloud" />
         <CV />
+        <PatternDivider variant="ruyi" />
         <Contact />
       </main>
       <Footer />
