@@ -1,10 +1,12 @@
-"use client";
-
 import FadeIn from "@/components/ui/FadeIn";
 import ProjectCard from "@/components/projects/ProjectCard";
-import { mockProjects } from "@/lib/mock-projects";
+import type { Project } from "@/types/project";
 
-export default function Projects() {
+interface ProjectsProps {
+  projects: Project[];
+}
+
+export default function Projects({ projects }: ProjectsProps) {
   return (
     <section id="projects" className="py-24 px-6 bg-light-gray/20">
       <div className="max-w-6xl mx-auto">
@@ -18,7 +20,7 @@ export default function Projects() {
         </FadeIn>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {mockProjects.map((project, i) => (
+          {projects.map((project, i) => (
             <FadeIn key={project.id} delay={i * 0.1}>
               <ProjectCard project={project} />
             </FadeIn>
