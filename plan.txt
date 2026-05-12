@@ -1,0 +1,110 @@
+Mr.Green 个人网站 — Phase 1-2 开发计划
+                                                                                                                             Context
+                                                                                                                             基于 PRD v2.0 搭建 Mr.Green 个人网站。本次开发范围为 Phase 1-2：项目初始化 + 全局样式 + Navbar + Hero + About +
+     Research Interests。使用 mock 数据，暂不接入 Notion CMS。
+
+     技术栈
+
+     - Next.js 15+ (App Router, TypeScript)
+     - Tailwind CSS 4
+     - Framer Motion
+     - Google Fonts: Poppins, Lora, Noto Serif SC, Noto Sans SC, JetBrains Mono
+
+     配色方案
+
+     - Dark: #141413 | Light: #FAF9F5 | Mid Gray: #B0AEA5 | Light Gray: #E8E6DC
+     - Green: #788C5D | Orange: #D97757 | Blue: #6A9BCC | Card: #FFFFFF
+
+     开发步骤
+
+     Step 1: 项目初始化
+
+     - npx create-next-app@latest with TypeScript, Tailwind CSS, App Router
+     - 安装 framer-motion
+     - 配置 tailwind.config.ts（品牌色、字体）
+     - 配置 globals.css（字体导入、基础样式）
+
+     Step 2: 布局与字体
+
+     - app/layout.tsx: 全局布局，字体配置（next/font），meta tags
+     - styles/typography.css: 排版细调
+
+     Step 3: Navbar 组件
+
+     - components/layout/Navbar.tsx
+     - 固定顶部，半透明毛玻璃背景
+     - 左侧: Mr.Green + ARCHIVE STATUS: ONLINE 标识
+     - 右侧: 锚点导航 (Home · About · Research · Library · Projects · CV · Contact)
+     - 移动端汉堡菜单
+     - 平滑滚动
+
+     Step 4: Hero 首屏
+
+     - components/sections/Hero.tsx
+     - 品牌名 Mr.Green 大字
+     - Slogan "Let idea free"
+     - 格言引用
+     - 简短自我介绍
+     - 社交链接 (GitHub / Email)
+     - Archive Status 指示器
+
+     Step 5: About 关于我
+
+     - components/sections/About.tsx
+     - 个人故事叙述段落
+     - 关键词标签展示
+
+     Step 6: Research Interests 研究兴趣
+
+     - components/sections/Research.tsx
+     - 关键词标签云
+     - 主题卡片（标题 + 描述 + Tags）
+
+     Step 7: 通用 UI 组件
+
+     - components/ui/Tag.tsx: 标签组件
+     - components/ui/FadeIn.tsx: 滚动渐显动效 (Framer Motion)
+     - components/ui/StatusBadge.tsx: 状态标签
+
+     Step 8: Footer
+
+     - components/layout/Footer.tsx
+     - 版权信息 + 社交链接
+
+     Step 9: 首页组装
+
+     - app/page.tsx: 组合所有 Section，单页滚动
+
+     关键文件
+
+     personal_website/
+     ├── app/
+     │   ├── layout.tsx          # 全局布局 + 字体 + meta
+     │   ├── page.tsx            # 首页组装
+     │   └── globals.css         # Tailwind 基础 + 自定义样式
+     ├── components/
+     │   ├── layout/
+     │   │   ├── Navbar.tsx
+     │   │   └── Footer.tsx
+     │   ├── sections/
+     │   │   ├── Hero.tsx
+     │   │   ├── About.tsx
+     │   │   └── Research.tsx
+     │   └── ui/
+     │       ├── Tag.tsx
+     │       ├── FadeIn.tsx
+     │       └── StatusBadge.tsx
+     ├── styles/
+     │   └── typography.css
+     ├── tailwind.config.ts
+     ├── next.config.ts
+     └── package.json
+
+     验证方式
+
+     1. npm run dev 启动开发服务器
+     2. 检查所有 Section 渲染正常
+     3. 检查响应式布局（Desktop / Tablet / Mobile）
+     4. 检查锚点导航跳转
+     5. 检查滚动渐显动画
+     6. 检查 Navbar 固定与毛玻璃效果

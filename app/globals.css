@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+@theme {
+  /* Brand Colors - Anthropic + Mr.Green */
+  --color-dark: #141413;
+  --color-light: #FAF9F5;
+  --color-mid-gray: #B0AEA5;
+  --color-light-gray: #E8E6DC;
+  --color-green: #788C5D;
+  --color-green-light: #8a9e6f;
+  --color-orange: #D97757;
+  --color-blue: #6A9BCC;
+  --color-card: #FFFFFF;
+
+  /* Font Families */
+  --font-heading: "Poppins", Arial, sans-serif;
+  --font-body-en: "Lora", Georgia, serif;
+  --font-heading-cn: "Noto Serif SC", "宋体", serif;
+  --font-body-cn: "Noto Sans SC", "黑体", sans-serif;
+  --font-mono: "JetBrains Mono", Menlo, monospace;
+}
+
+/* Base styles */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+body {
+  background-color: var(--color-light);
+  color: var(--color-dark);
+  font-family: var(--font-body-cn);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-light);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-light-gray);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-mid-gray);
+}
+
+/* Selection color */
+::selection {
+  background-color: var(--color-green);
+  color: white;
+}
+
+/* Focus styles */
+:focus-visible {
+  outline: 2px solid var(--color-green);
+  outline-offset: 2px;
+}
+
+/* Smooth image rendering */
+img {
+  max-width: 100%;
+  height: auto;
+}
