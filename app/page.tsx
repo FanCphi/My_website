@@ -37,9 +37,9 @@ export default async function Home() {
         <PatternDivider variant="cloud" />
         <Research />
         <PatternDivider variant="ruyi" />
-        <Library articles={articles} />
-        <PatternDivider variant="quxi" />
         <Projects projects={projects} />
+        <PatternDivider variant="quxi" />
+        <Library articles={articles} />
         <PatternDivider variant="cloud" />
         <CV />
         <PatternDivider variant="ruyi" />

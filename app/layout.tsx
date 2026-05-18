@@ -6,6 +6,7 @@ import {
   Noto_Sans_SC,
   JetBrains_Mono,
 } from "next/font/google";
+import Sidebar from "@/components/layout/Sidebar";
 import "./globals.css";
 
 const poppins = Poppins({
@@ -98,6 +99,7 @@ export default function RootLayout({
       <body
         className={`${poppins.variable} ${lora.variable} ${notoSerifSC.variable} ${notoSansSC.variable} ${jetbrainsMono.variable} antialiased`}
       >
+        <Sidebar />
         {children}
       </body>
     </html>
