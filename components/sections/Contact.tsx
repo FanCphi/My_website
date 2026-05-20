@@ -5,10 +5,32 @@ import FadeIn from "@/components/ui/FadeIn";
 
 export default function Contact() {
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
 
-  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    setSubmitted(true);
+    const form = e.currentTarget;
+    const data = new FormData(form);
+
+    setLoading(true);
+    const res = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: JSON.stringify({
+        access_key: process.env.NEXT_PUBLIC_WEB3FORMS_KEY,
+        name: data.get("name"),
+        email: data.get("email"),
+        message: data.get("message"),
+        subject: "New message from Mr.Green website",
+      }),
+      headers: { "Content-Type": "application/json" },
+    });
+    const json = await res.json();
+    setLoading(false);
+
+    if (json.success) {
+      setSubmitted(true);
+      form.reset();
+    }
   }
 
   return (
@@ -84,9 +106,10 @@ export default function Contact() {
                 </div>
                 <button
                   type="submit"
-                  className="w-full px-5 py-2.5 bg-dark text-light text-sm font-mono rounded-sm hover:bg-dark/90 transition-colors duration-200"
+                  disabled={loading}
+                  className="w-full px-5 py-2.5 bg-dark text-light text-sm font-mono rounded-sm hover:bg-dark/90 transition-colors duration-200 disabled:opacity-50"
                 >
-                  Send Message
+                  {loading ? "Sending..." : "Send Message"}
                 </button>
               </form>
             )}
