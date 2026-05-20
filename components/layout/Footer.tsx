@@ -14,7 +14,7 @@ export default function Footer() {
 
         <div className="flex items-center gap-4">
           <a
-            href="https://github.com"
+            href="https://github.com/FanCphi"
             target="_blank"
             rel="noopener noreferrer"
             className="text-mid-gray hover:text-green transition-colors"

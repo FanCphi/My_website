@@ -144,13 +144,21 @@ export default function Contact() {
                     GitHub
                   </span>
                   <a
-                    href="https://github.com"
+                    href="https://github.com/FanCphi"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-dark hover:text-green text-sm transition-colors duration-200"
                   >
-                    github.com
+                    github.com/FanCphi
                   </a>
+                </div>
+                <div className="flex items-center gap-3">
+                  <span className="text-mid-gray text-sm font-mono w-16">
+                    WeChat
+                  </span>
+                  <span className="text-dark text-sm">
+                    19155111230
+                  </span>
                 </div>
               </div>
             </div>

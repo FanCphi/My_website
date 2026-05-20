@@ -59,7 +59,7 @@ export default function Hero() {
         <FadeIn delay={0.5}>
           <div className="flex items-center justify-center gap-6">
             <a
-              href="https://github.com"
+              href="https://github.com/FanCphi"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 px-5 py-2.5 text-sm font-mono border border-light-gray rounded-md hover:border-green hover:text-green transition-all duration-200"
