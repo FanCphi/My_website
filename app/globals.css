@@ -18,6 +18,11 @@
   --color-baiqing: #94A9B8;         /* 白青 */
   --color-zhuyue: #65889E;          /* 竹月 */
 
+  /* 黄昏色调 — 密涅瓦的猫头鹰 */
+  --color-dusk-gold: #E8C87A;       /* 暮金 */
+  --color-dusk-warm: #D4A574;       /* 暮暖 */
+  --color-dusk-deep: #4A6B7A;       /* 暮深 */
+
   /* Font Families */
   --font-heading: "Poppins", Arial, sans-serif;
   --font-body-en: "Lora", Georgia, serif;
@@ -38,6 +43,20 @@ body {
   font-family: var(--font-body-cn);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* ===== 密涅瓦黄昏 — Dusk gradient overlay ===== */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse 120% 80% at 30% 10%, var(--color-dusk-gold) 0%, transparent 50%),
+    radial-gradient(ellipse 100% 90% at 80% 90%, var(--color-dusk-deep) 0%, transparent 50%),
+    linear-gradient(180deg, var(--color-dusk-warm) 0%, var(--color-light) 35%, var(--color-light) 65%, var(--color-zhuyue) 100%);
+  opacity: 0.06;
 }
 
 /* Scrollbar styling */

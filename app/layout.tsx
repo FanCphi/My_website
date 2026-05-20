@@ -7,6 +7,7 @@ import {
   JetBrains_Mono,
 } from "next/font/google";
 import Sidebar from "@/components/layout/Sidebar";
+import OwlMotif from "@/components/ui/OwlMotif";
 import "./globals.css";
 
 const poppins = Poppins({
@@ -52,7 +53,7 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   title: {
-    default: "Mr.Green — Let idea free",
+    default: "Mr.Green — Flow Shapes Zen",
     template: "%s | Mr.Green",
   },
   description:
@@ -70,7 +71,7 @@ export const metadata: Metadata = {
   creator: "Mr.Green",
   metadataBase: new URL("https://mr-green.dev"),
   openGraph: {
-    title: "Mr.Green — Let idea free",
+    title: "Mr.Green — Flow Shapes Zen",
     description:
       "自由探索者的个人网站 — 关注产品思维、AI 时代、区块链安全与数字人文。",
     type: "website",
@@ -79,7 +80,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Mr.Green — Let idea free",
+    title: "Mr.Green — Flow Shapes Zen",
     description:
       "自由探索者的个人网站 — 关注产品思维、AI 时代、区块链安全与数字人文。",
   },
@@ -100,6 +101,7 @@ export default function RootLayout({
         className={`${poppins.variable} ${lora.variable} ${notoSerifSC.variable} ${notoSansSC.variable} ${jetbrainsMono.variable} antialiased`}
       >
         <Sidebar />
+        <OwlMotif />
         {children}
       </body>
     </html>

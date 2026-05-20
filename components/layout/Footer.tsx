@@ -8,7 +8,7 @@ export default function Footer() {
           </span>
           <span className="text-mid-gray text-xs">·</span>
           <span className="text-mid-gray text-xs font-mono">
-            Let idea free
+            Flow Shapes Zen
           </span>
         </div>
 

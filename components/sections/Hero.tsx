@@ -24,18 +24,25 @@ export default function Hero() {
 
         {/* Slogan */}
         <FadeIn delay={0.2}>
-          <p className="font-body-en text-xl md:text-2xl text-mid-gray tracking-wide mb-8">
-            Let idea free
-          </p>
+          <div className="mb-8">
+            <p className="font-body-en text-xl md:text-2xl text-mid-gray tracking-wide">
+              <span className="text-green font-semibold">F</span>low{" "}
+              <span className="text-green font-semibold">S</span>hapes{" "}
+              <span className="text-green font-semibold">Z</span>en
+            </p>
+            <p className="font-body-cn text-sm md:text-base text-mid-gray/70 tracking-widest mt-2">
+              随 流 即 禅
+            </p>
+          </div>
         </FadeIn>
 
-        {/* Quote */}
+        {/* Quote — Minerva's Owl */}
         <FadeIn delay={0.3}>
           <blockquote className="text-sm md:text-base text-mid-gray/80 italic mb-10 max-w-xl mx-auto font-body-en">
-            &ldquo;The important thing is not to stop questioning. Curiosity
-            has its own reason for existence.&rdquo;
+            &ldquo;The owl of Minerva spreads its wings only with the falling
+            of the dusk.&rdquo;
             <span className="block mt-1 not-italic text-mid-gray/60 text-xs">
-              — Albert Einstein
+              — G.W.F. Hegel
             </span>
           </blockquote>
         </FadeIn>
