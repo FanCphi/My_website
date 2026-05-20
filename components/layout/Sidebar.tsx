@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 
 const sidebarItems = [
   { label: "Dictionary", href: "/dictionary" },
+  { label: "Fables", href: "/fables" },
 ];
 
 export default function Sidebar() {
